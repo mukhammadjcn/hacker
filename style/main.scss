@@ -1,0 +1,278 @@
+// Font style links from google font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// Code start here, creditansial from https://t.me/mukhammadjcn
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration-line: none;
+}
+
+// Body
+body {
+  background-image: url("../images/4-47732_hacker-boy-hacker.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+}
+
+// Container
+.container {
+  position: relative;
+  padding: 0 48px;
+}
+
+// Header of body
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  .logo {
+    font-weight: 600;
+    font-size: 64px;
+    color: white;
+    line-height: 120%;
+  }
+}
+
+// Navbar
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  justify-content: space-between;
+
+  &__item {
+    cursor: pointer;
+    color: white;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    &:hover {
+      color: #d67d3e;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #d67d3e;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__search {
+    transition: 0.3s ease-in-out;
+    svg path,
+    svg circle {
+      transition: 0.3s ease-in-out;
+    }
+    &:hover {
+      transform: rotateY(180deg) scale(1.3);
+      svg path {
+        stroke: #d67d3e;
+      }
+      svg circle {
+        stroke: #d67d3e;
+      }
+    }
+  }
+
+  &__menu {
+    cursor: pointer;
+    display: none;
+  }
+}
+
+// Main
+.main {
+  display: flex;
+  align-items: flex-start;
+  color: white;
+  padding-top: 82px;
+
+  &__timer {
+    flex-basis: 60%;
+    &--line {
+      width: 256px;
+      height: 3px;
+      background: #8e8b8b;
+      margin: 5px 0;
+      position: relative;
+      border-radius: 2px;
+      overflow: hidden;
+
+      span {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 75%;
+        background-color: #d67d3e;
+      }
+    }
+    &--context {
+      font-size: 15px;
+    }
+    p {
+      font-size: 13px;
+      color: #7a7a7a;
+    }
+  }
+
+  &__info {
+    flex-basis: 40%;
+    h1 {
+      line-height: 110%;
+      font-size: 72px;
+      margin-bottom: 16px;
+    }
+    p {
+      color: #cccccc;
+      font-size: 16px;
+    }
+  }
+}
+
+// Footer
+.footer {
+  padding: 18px 48px;
+  margin-top: 108px;
+  background-color: #313131cf;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  color: white;
+
+  div {
+    flex-basis: 25%;
+  }
+
+  img {
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+    margin: 6px 0;
+  }
+
+  p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #cccccc;
+  }
+
+  h4 {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .readMore {
+    color: #d67d3e;
+  }
+  .dots {
+    display: inline-block;
+    font-size: 48px;
+    line-height: 0px;
+  }
+}
+
+// Animation
+.animation {
+  animation: animate 6s ease-in-out infinite;
+}
+
+// Media queries
+@media (max-width: 850px) {
+  .container {
+    padding: 0 24px;
+  }
+  .header .logo {
+    font-size: 32px;
+  }
+
+  .nav {
+    transition: 0.6s ease-in-out;
+    position: absolute;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: -1000px;
+    background: #454545f7;
+    justify-content: center;
+    z-index: 2;
+    &__item {
+      font-size: 24px;
+    }
+  }
+
+  .nav__menu {
+    z-index: 3;
+    display: block;
+    background: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    svg {
+      transition: 0.6s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .main {
+    flex-direction: column-reverse;
+    gap: 64px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 32px 24px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 85%;
+  }
+  15% {
+    width: 65%;
+  }
+  30% {
+    width: 95%;
+  }
+  45% {
+    width: 15%;
+  }
+  60% {
+    width: 50%;
+  }
+  75% {
+    width: 45%;
+  }
+  90% {
+    width: 10%;
+  }
+  100% {
+    width: 85%;
+  }
+}

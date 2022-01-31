@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <title>Hacker</title>
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <a href="#" class="logo"> Aer </a>
+
+        <nav class="nav" id="menu">
+          <a href="#" class="nav__item">Home</a>
+          <a href="#" class="nav__item">Products</a>
+          <a href="#" class="nav__item">About</a>
+          <a href="#" class="nav__item">Locations</a>
+          <a href="#" class="nav__item">Cast</a>
+          <button class="nav__search">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="11" cy="11" r="7" stroke="#fff" stroke-width="1.5" />
+              <path
+                d="M16 16L19 19"
+                stroke="#fff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+        <button class="nav__menu" onclick="showMenu()">
+          <svg
+            id="menuIcon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_1_20096)">
+              <path
+                d="M4 5.99994H20M10 11.9999H20M16 17.9999H20"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1_20096">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </header>
+
+      <!-- Main section -->
+      <section class="main">
+        <div class="main__timer">
+          <h2 class="main__timer--title">/01</h2>
+          <div class="main__timer--line">
+            <span class="animation"></span>
+          </div>
+          <h3 class="main__timer--context">Work collection</h3>
+          <p>Warning Info</p>
+          <p>Warning Info</p>
+        </div>
+        <div class="main__info">
+          <h1>
+            Work <br />
+            Anyware
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo
+            maxime culpa corrupti accusantium dignissimos, tenetur obcaecati!
+            Officiis quibusdam quaerat perspiciatis voluptatem nobis. Ut quos
+            numquam repellat ipsum, possimus laboriosam praesentium dignissimos
+            atque, officiis
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="footer__item">
+        <h4>EVENTS</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="dots">...</div>
+      </div>
+      <div class="footer__item">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="footer__item" style="text-align: center">
+        <img src="./images/uwp1684676.jpeg" alt="Hacker image" />
+      </div>
+      <div class="footer__item">
+        <h4>NEWS</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="readMore">Read more..</div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    let navbar = document.getElementById("menu");
+    let menu = false;
+    let icon = document.getElementById("menuIcon");
+    function showMenu() {
+      menu = !menu;
+      if (menu) {
+        navbar.style.left = "0px";
+        icon.style.transform = "rotateY(180deg)";
+        document.body.style.overflow = "hidden";
+      } else {
+        navbar.style.left = "-1000px";
+        icon.style.transform = "rotateY(0deg)";
+        document.body.style.overflow = "initial";
+      }
+    }
+  </script>
+</html>
